@@ -1,6 +1,6 @@
-# Desarrollo de Videojuegos - SuperCastle
+# Castle - Base
 
-Se trata de un prototipo básico de videojuego de plataformas 3D en el que controlamos a un personaje que debe alcanzar un trofeo en lo alto de un castillo, teniendo que superar para ello varias pruebas.
+Se trata de un prototipo básico de videojuego de plataformas 3D para Unreal Engine 5.6 en el que controlamos a un personaje que debe alcanzar un trofeo en lo alto de un castillo, teniendo que superar para ello varias pruebas.
 
 La versión original del juego fue creada por Alejandro Villar, que posteriormente fue revisada y completada por Federico Peinado. El código se distribuye bajo la licencia GPL.
 
@@ -17,7 +17,7 @@ Para este proyecto (cuando esté actualizado a UE5, me temo) hace falta descarga
 * ThirdPerson
 * ThirdPersonBP
 
-Nos podríamos ahorrar esta descarga usando GitHub Actions, la herramienta de automatización de GitHub. Habría que crear un workflow YAML (en .github/workflows/) que verifique si las carpetas correspondientes están ya presentes en el disco duro, descargue los ficheros ZIP (a través del ID público de las carpetas compartidas en Google Drive) y los descomprima dentro de la carpeta Content.
+Para facilitar esta descarga podemos crear un fichero de PowerShell que haga ese trabajo con nosotros: en bucle empezar a descargar uno a uno los ficheros ZIP del contenido, a través del ID público de las carpetas compartidas en Google Drive y si no hay carpetas ya con esos nombres dentro de Content, luego descomprimir y volcar cada uno de ellos en la carpeta Content, destruyéndo el fichero ZIP antes de descargar el siguiente.  
 
 Al no estar publicada todavía ninguna versión ejecutable del prototipo, ni enlazado ningún video con las pruebas realizadas, es necesario abrir el proyecto en Unreal Engine y jugarlo desde allí.
 
